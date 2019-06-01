@@ -20,10 +20,7 @@ Java 11
 ## Build
 mvn -U package assembly:single
 
-## Run
-$JAVA_HOME/bin/java -jar target/swinginspector-0.1.0-SNAPSHOT-jar-with-dependencies.jar
-
-##Usage
+## Usage
 
 ### Starting a client application
 
