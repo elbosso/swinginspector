@@ -1,0 +1,180 @@
+<!--
+Copyright (c) 2012-2019.
+Juergen Key. Alle Rechte vorbehalten.
+Weiterverbreitung und Verwendung in nichtkompilierter oder kompilierter Form,
+mit oder ohne Veraenderung, sind unter den folgenden Bedingungen zulaessig:
+   1. Weiterverbreitete nichtkompilierte Exemplare muessen das obige Copyright,
+die Liste der Bedingungen und den folgenden Haftungsausschluss im Quelltext
+enthalten.
+   2. Weiterverbreitete kompilierte Exemplare muessen das obige Copyright,
+die Liste der Bedingungen und den folgenden Haftungsausschluss in der
+Dokumentation und/oder anderen Materialien, die mit dem Exemplar verbreitet
+werden, enthalten.
+   3. Weder der Name des Autors noch die Namen der Beitragsleistenden
+duerfen zum Kennzeichnen oder Bewerben von Produkten, die von dieser Software
+abgeleitet wurden, ohne spezielle vorherige schriftliche Genehmigung verwendet
+werden.
+DIESE SOFTWARE WIRD VOM AUTOR UND DEN BEITRAGSLEISTENDEN OHNE
+JEGLICHE SPEZIELLE ODER IMPLIZIERTE GARANTIEN ZUR VERFUEGUNG GESTELLT, DIE
+UNTER ANDEREM EINSCHLIESSEN: DIE IMPLIZIERTE GARANTIE DER VERWENDBARKEIT DER
+SOFTWARE FUER EINEN BESTIMMTEN ZWECK. AUF KEINEN FALL IST DER AUTOR
+ODER DIE BEITRAGSLEISTENDEN FUER IRGENDWELCHE DIREKTEN, INDIREKTEN,
+ZUFAELLIGEN, SPEZIELLEN, BEISPIELHAFTEN ODER FOLGENDEN SCHAEDEN (UNTER ANDEREM
+VERSCHAFFEN VON ERSATZGUETERN ODER -DIENSTLEISTUNGEN; EINSCHRAENKUNG DER
+NUTZUNGSFAEHIGKEIT; VERLUST VON NUTZUNGSFAEHIGKEIT; DATEN; PROFIT ODER
+GESCHAEFTSUNTERBRECHUNG), WIE AUCH IMMER VERURSACHT UND UNTER WELCHER
+VERPFLICHTUNG AUCH IMMER, OB IN VERTRAG, STRIKTER VERPFLICHTUNG ODER
+UNERLAUBTE HANDLUNG (INKLUSIVE FAHRLAESSIGKEIT) VERANTWORTLICH, AUF WELCHEM
+WEG SIE AUCH IMMER DURCH DIE BENUTZUNG DIESER SOFTWARE ENTSTANDEN SIND, SOGAR,
+WENN SIE AUF DIE MOEGLICHKEIT EINES SOLCHEN SCHADENS HINGEWIESEN WORDEN SIND.
+-->
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>de.elbosso.ui.debug</groupId>
+  <artifactId>swinginspector</artifactId>
+  <version>0.1.0-SNAPSHOT</version>
+  <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <configuration>
+                      <source>9</source>
+                      <target>9</target>
+                      <compilerVersion>9</compilerVersion>    
+                    </configuration>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-assembly-plugin</artifactId>
+                    <configuration>
+                        <archive>
+                            <manifestEntries>
+                                <Premain-Class>de.elbosso.ui.debug.inspector.Manager</Premain-Class>
+                            </manifestEntries>
+                        </archive>
+                        <descriptorRefs>
+                            <descriptorRef>jar-with-dependencies</descriptorRef>
+                        </descriptorRefs>
+                    </configuration>
+                    <executions>
+                        <execution>
+                            <phase>package</phase>
+                            <goals>
+                                <goal>single</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
+    <properties>
+        <project.custom.encoding>UTF-8</project.custom.encoding>
+        <project.custom.java.version>1.6</project.custom.java.version>
+        <maven.compiler.source>${project.custom.java.version}</maven.compiler.source>
+        <maven.compiler.target>${project.custom.java.version}</maven.compiler.target>
+        <project.build.sourceEncoding>${project.custom.encoding}</project.build.sourceEncoding>
+        <project.build.outputEncoding>${project.custom.encoding}</project.build.outputEncoding>
+        <project.reporting.outputEncoding>${project.custom.encoding}</project.reporting.outputEncoding>
+    </properties>
+    <repositories>
+        <repository>
+            <releases>
+                <enabled>true</enabled>
+                <updatePolicy>always</updatePolicy>
+                <checksumPolicy>fail</checksumPolicy>
+            </releases>
+            <id>YourId</id>
+            <name>YourName</name>
+            <url>http://elbosso.github.io/maven2</url>
+            <layout>default</layout>
+        </repository>
+        <repository>
+            <id>central</id>
+            <url>http://central.maven.org/maven2/</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+        </repository>
+		<!--BeanShell-->
+		<repository>
+		  <id>Boundless Repository</id>
+		  <url>	http://repo.boundlessgeo.com/main/</url>
+		</repository>
+    </repositories>
+    <dependencies>
+        <dependency>
+            <groupId>de.elbosso</groupId>
+            <artifactId>util</artifactId>
+            <version>0.1.0-SNAPSHOT</version>
+			<scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>de.elbosso</groupId>
+            <artifactId>ui</artifactId>
+            <version>0.1.0-SNAPSHOT</version>
+			<scope>compile</scope>
+        </dependency>
+        <!--dependency>
+            <groupId>de.elbosso</groupId>
+            <artifactId>documents</artifactId>
+            <version>0.1.0-SNAPSHOT</version>
+			<scope>compile</scope>
+        </dependency-->
+        <!--dependency>
+            <groupId>de.elbosso</groupId>
+            <artifactId>model</artifactId>
+            <version>0.1.0-SNAPSHOT</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>de.elbosso</groupId>
+            <artifactId>model_i18n</artifactId>
+            <version>0.1.0-SNAPSHOT</version>
+            <scope>compile</scope>
+        </dependency-->
+        <!--dependency>
+            <groupId>de.elbosso</groupId>
+            <artifactId>db</artifactId>
+            <version>0.1.0-SNAPSHOT</version>
+			<scope>compile</scope>
+        </dependency-->
+        <!--dependency>
+            <groupId>de.elbosso</groupId>
+            <artifactId>db_i18n</artifactId>
+            <version>0.1.0-SNAPSHOT</version>
+			<scope>compile</scope>
+        </dependency-->
+        <!--dependency>
+            <groupId>de.elbosso</groupId>
+            <artifactId>util_annotations</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+			<scope>compile</scope>
+        </dependency-->
+        <!--dependency>
+            <groupId>de.elbosso.annotation.processors</groupId>
+            <artifactId>beaninfo</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+			<scope>compile</scope>
+        </dependency-->
+        <!--dependency>
+            <groupId>de.elbosso</groupId>
+            <artifactId>materialgfx</artifactId>
+            <version>0.1.0-SNAPSHOT</version>
+        </dependency-->
+        <!--dependency>
+            <groupId>de.elbosso</groupId>
+            <artifactId>algorithms</artifactId>
+            <version>0.1.0-SNAPSHOT</version>
+        </dependency-->
+		<!-- https://mvnrepository.com/artifact/log4j/log4j -->
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>1.2.17</version>
+		</dependency>
+    </dependencies>
+</project>
