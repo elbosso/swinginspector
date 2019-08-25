@@ -70,6 +70,28 @@ WENN SIE AUF DIE MOEGLICHKEIT EINES SOLCHEN SCHADENS HINGEWIESEN WORDEN SIND.
                 </plugin>
             </plugins>
         </pluginManagement>
+      <plugins>
+          <!-- https://github.com/tomasbjerre/git-changelog-maven-plugin/blob/master/git-changelog-maven-plugin-example/pom.xml -->
+          <plugin>
+              <groupId>se.bjurr.gitchangelog</groupId>
+              <artifactId>git-changelog-maven-plugin</artifactId>
+              <version>1.60</version>
+              <executions>
+                  <execution>
+                      <id>GenerateGitChangelogTemplateFromFileAndToken</id>
+                      <phase>generate-sources</phase>
+                      <goals>
+                          <goal>git-changelog</goal>
+                      </goals>
+                      <configuration>
+                          <templateFile>changelog.mustache</templateFile>
+                          <readableTagName>-([^-]+?)$</readableTagName>
+                          <file>CHANGELOG.md</file>
+                      </configuration>
+                  </execution>
+              </executions>
+          </plugin>
+      </plugins>
     </build>
     <properties>
         <project.custom.encoding>UTF-8</project.custom.encoding>
