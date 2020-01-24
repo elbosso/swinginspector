@@ -111,12 +111,12 @@ WENN SIE AUF DIE MOEGLICHKEIT EINES SOLCHEN SCHADENS HINGEWIESEN WORDEN SIND.
             </releases>
             <id>YourId</id>
             <name>YourName</name>
-            <url>http://elbosso.github.io/maven2</url>
+            <url>https://elbosso.github.io/maven2</url>
             <layout>default</layout>
         </repository>
         <repository>
             <id>central</id>
-            <url>http://central.maven.org/maven2/</url>
+            <url>https://central.maven.org/maven2/</url>
             <releases>
                 <enabled>true</enabled>
             </releases>
@@ -124,7 +124,7 @@ WENN SIE AUF DIE MOEGLICHKEIT EINES SOLCHEN SCHADENS HINGEWIESEN WORDEN SIND.
 		<!--BeanShell-->
 		<repository>
 		  <id>Boundless Repository</id>
-		  <url>	http://repo.boundlessgeo.com/main/</url>
+		  <url>	https://repo.boundlessgeo.com/main/</url>
 		</repository>
     </repositories>
     <dependencies>
