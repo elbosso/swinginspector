@@ -5,6 +5,20 @@ Changelog of Git Changelog Maven plugin.
 ## Unreleased
 ### No issue
 
+**maven central completely blocks http now**
+
+
+[aa2a482dbf47af1](https://github.com/elbosso/swinginspector/commit/aa2a482dbf47af1) Jürgen Key *2020-01-24 17:59:42*
+
+**added changelog**
+
+
+[52818af69cc1814](https://github.com/elbosso/swinginspector/commit/52818af69cc1814) Jürgen Key *2019-08-25 13:14:20*
+
+
+## alpha
+### No issue
+
 **small beauty repairs in readme**
 
 
