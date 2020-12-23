@@ -33,7 +33,23 @@ WENN SIE AUF DIE MOEGLICHKEIT EINES SOLCHEN SCHADENS HINGEWIESEN WORDEN SIND.
   <modelVersion>4.0.0</modelVersion>
   <groupId>de.elbosso.ui.debug</groupId>
   <artifactId>swinginspector</artifactId>
-  <version>0.1.1-SNAPSHOT</version>
+  <version>1.0.0-SNAPSHOT</version>
+    <scm>
+        <developerConnection>scm:git:https://github.com/elbosso/swinginspector.git</developerConnection>
+      <tag>HEAD</tag>
+  </scm>
+
+    <properties>
+        <project.custom.encoding>UTF-8</project.custom.encoding>
+        <project.custom.java.version>1.6</project.custom.java.version>
+        <maven.compiler.source>${project.custom.java.version}</maven.compiler.source>
+        <maven.compiler.target>${project.custom.java.version}</maven.compiler.target>
+        <project.build.sourceEncoding>${project.custom.encoding}</project.build.sourceEncoding>
+        <project.build.outputEncoding>${project.custom.encoding}</project.build.outputEncoding>
+        <project.reporting.outputEncoding>${project.custom.encoding}</project.reporting.outputEncoding>
+      <project.scm.id>elbossos-github</project.scm.id>
+    </properties>
+
   <build>
         <pluginManagement>
             <plugins>
@@ -71,6 +87,14 @@ WENN SIE AUF DIE MOEGLICHKEIT EINES SOLCHEN SCHADENS HINGEWIESEN WORDEN SIND.
             </plugins>
         </pluginManagement>
       <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-release-plugin</artifactId>
+                <version>3.0.0-M1</version>
+                <configuration>
+                    <preparationGoals>package assembly:single</preparationGoals>
+                </configuration>
+            </plugin>
           <!-- https://github.com/tomasbjerre/git-changelog-maven-plugin/blob/master/git-changelog-maven-plugin-example/pom.xml -->
           <plugin>
               <groupId>se.bjurr.gitchangelog</groupId>
@@ -93,15 +117,6 @@ WENN SIE AUF DIE MOEGLICHKEIT EINES SOLCHEN SCHADENS HINGEWIESEN WORDEN SIND.
           </plugin>
       </plugins>
     </build>
-    <properties>
-        <project.custom.encoding>UTF-8</project.custom.encoding>
-        <project.custom.java.version>1.6</project.custom.java.version>
-        <maven.compiler.source>${project.custom.java.version}</maven.compiler.source>
-        <maven.compiler.target>${project.custom.java.version}</maven.compiler.target>
-        <project.build.sourceEncoding>${project.custom.encoding}</project.build.sourceEncoding>
-        <project.build.outputEncoding>${project.custom.encoding}</project.build.outputEncoding>
-        <project.reporting.outputEncoding>${project.custom.encoding}</project.reporting.outputEncoding>
-    </properties>
     <repositories>
         <repository>
             <releases>
@@ -131,13 +146,7 @@ WENN SIE AUF DIE MOEGLICHKEIT EINES SOLCHEN SCHADENS HINGEWIESEN WORDEN SIND.
         <dependency>
             <groupId>de.elbosso</groupId>
             <artifactId>util</artifactId>
-            <version>1.1.0-SNAPSHOT</version>
-			<scope>compile</scope>
-        </dependency>
-        <dependency>
-            <groupId>de.elbosso</groupId>
-            <artifactId>ui</artifactId>
-            <version>1.1.0-SNAPSHOT</version>
+            <version>1.2.0</version>
 			<scope>compile</scope>
         </dependency>
 		<!-- https://mvnrepository.com/artifact/log4j/log4j -->
@@ -147,4 +156,11 @@ WENN SIE AUF DIE MOEGLICHKEIT EINES SOLCHEN SCHADENS HINGEWIESEN WORDEN SIND.
 			<version>1.2.17</version>
 		</dependency>
     </dependencies>
+    <distributionManagement>
+        <repository>
+            <id>internal.repo</id>
+            <name>Internal repo</name>
+            <url>file:///tmp/</url>
+        </repository>
+    </distributionManagement>
 </project>
