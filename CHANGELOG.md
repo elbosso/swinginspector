@@ -2,7 +2,7 @@
 
 Changelog of Git Changelog Maven plugin.
 
-## Unreleased
+## 1.0.0
 ### GitHub #9 
 
 **fixes #9**
@@ -12,6 +12,11 @@ Changelog of Git Changelog Maven plugin.
 
 
 ### No issue
+
+**automated maven release management**
+
+
+[eaf8f7f77bca998](https://github.com/elbosso/swinginspector/commit/eaf8f7f77bca998) Jürgen Key *2020-12-23 11:43:33*
 
 **maven central completely blocks http now**
 
