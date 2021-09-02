@@ -141,7 +141,7 @@ WENN SIE AUF DIE MOEGLICHKEIT EINES SOLCHEN SCHADENS HINGEWIESEN WORDEN SIND.
         </repository>
         <repository>
             <id>central</id>
-            <url>https://central.maven.org/maven2/</url>
+            <url>https://repo.maven.apache.org/maven2/</url>
             <releases>
                 <enabled>true</enabled>
             </releases>
