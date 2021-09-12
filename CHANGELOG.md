@@ -2,6 +2,20 @@
 
 Changelog of Git Changelog Maven plugin.
 
+## Unreleased
+### No issue
+
+**Update Maven central repository URL**
+
+
+[fe819ea18377ead](https://github.com/elbosso/swinginspector/commit/fe819ea18377ead) James Martindale *2021-09-02 20:04:12*
+
+**repository locations fixed**
+
+
+[ca9c7fef4adcac5](https://github.com/elbosso/swinginspector/commit/ca9c7fef4adcac5) Jürgen Key *2021-03-07 07:29:32*
+
+
 ## 1.0.0
 ### GitHub #9 
 
