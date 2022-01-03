@@ -5,6 +5,11 @@ Changelog of Git Changelog Maven plugin.
 ## Unreleased
 ### No issue
 
+**change of repository location for de.elbosso artifacts**
+
+
+[20b323a55bf29c2](https://github.com/elbosso/swinginspector/commit/20b323a55bf29c2) Jürgen Key *2021-09-12 08:35:37*
+
 **Update Maven central repository URL**
 
 

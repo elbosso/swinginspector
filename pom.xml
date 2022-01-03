@@ -47,6 +47,7 @@ WENN SIE AUF DIE MOEGLICHKEIT EINES SOLCHEN SCHADENS HINGEWIESEN WORDEN SIND.
         <project.build.outputEncoding>${project.custom.encoding}</project.build.outputEncoding>
         <project.reporting.outputEncoding>${project.custom.encoding}</project.reporting.outputEncoding>
       <project.scm.id>elbossos-github</project.scm.id>
+        <elbosso.artifacts.version>1.6.0-SNAPSHOT</elbosso.artifacts.version>
     </properties>
 
   <build>
@@ -161,7 +162,7 @@ WENN SIE AUF DIE MOEGLICHKEIT EINES SOLCHEN SCHADENS HINGEWIESEN WORDEN SIND.
         <dependency>
             <groupId>de.elbosso</groupId>
             <artifactId>util</artifactId>
-            <version>1.3.0</version>
+            <version>${elbosso.artifacts.version}</version>
 			<scope>compile</scope>
         </dependency>
 		<!-- https://mvnrepository.com/artifact/log4j/log4j -->
