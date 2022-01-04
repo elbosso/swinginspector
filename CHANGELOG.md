@@ -5,6 +5,11 @@ Changelog of Git Changelog Maven plugin.
 ## Unreleased
 ### No issue
 
+**icon sizing issues**
+
+
+[706b1ac1fda03f6](https://github.com/elbosso/swinginspector/commit/706b1ac1fda03f6) Jürgen Key *2022-01-03 16:37:34*
+
 **change of repository location for de.elbosso artifacts**
 
 

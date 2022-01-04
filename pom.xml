@@ -47,7 +47,7 @@ WENN SIE AUF DIE MOEGLICHKEIT EINES SOLCHEN SCHADENS HINGEWIESEN WORDEN SIND.
         <project.build.outputEncoding>${project.custom.encoding}</project.build.outputEncoding>
         <project.reporting.outputEncoding>${project.custom.encoding}</project.reporting.outputEncoding>
       <project.scm.id>elbossos-github</project.scm.id>
-        <elbosso.artifacts.version>1.6.0-SNAPSHOT</elbosso.artifacts.version>
+        <elbosso.artifacts.version>1.6.0</elbosso.artifacts.version>
     </properties>
 
   <build>
