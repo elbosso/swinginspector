@@ -163,7 +163,16 @@ WENN SIE AUF DIE MOEGLICHKEIT EINES SOLCHEN SCHADENS HINGEWIESEN WORDEN SIND.
             <groupId>de.elbosso</groupId>
             <artifactId>util</artifactId>
             <version>${elbosso.artifacts.version}</version>
-			<scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>de.elbosso</groupId>
+            <artifactId>model</artifactId>
+            <version>${elbosso.artifacts.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>de.elbosso</groupId>
+            <artifactId>documents</artifactId>
+            <version>${elbosso.artifacts.version}</version>
         </dependency>
 		<!-- https://mvnrepository.com/artifact/log4j/log4j -->
 		<dependency>

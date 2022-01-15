@@ -2,8 +2,13 @@
 
 Changelog of Git Changelog Maven plugin.
 
-## Unreleased
+## 1.1.0
 ### No issue
+
+**dependency management**
+
+
+[fca582cc7332e26](https://github.com/elbosso/swinginspector/commit/fca582cc7332e26) Jürgen Key *2022-01-04 07:38:58*
 
 **icon sizing issues**
 
