@@ -4,8 +4,6 @@
  */
 package de.elbosso.ui.debug.inspector;
 
-import org.apache.log4j.Level;
-
 import java.awt.*;
 import java.awt.event.ActionEvent;
 
@@ -15,8 +13,8 @@ import java.awt.event.ActionEvent;
  */
 public class Core extends java.awt.EventQueue implements java.awt.event.AWTEventListener
 {
-	private final static org.apache.log4j.Logger CLASS_LOGGER = org.apache.log4j.Logger.getLogger(Core.class);
-	private final static org.apache.log4j.Logger EXCEPTION_LOGGER = org.apache.log4j.Logger.getLogger("ExceptionCatcher");
+	private final static org.slf4j.Logger CLASS_LOGGER = org.slf4j.LoggerFactory.getLogger(Core.class);
+	private final static org.slf4j.Logger EXCEPTION_LOGGER = org.slf4j.LoggerFactory.getLogger("ExceptionCatcher");
 	private final static java.util.ResourceBundle i18n=java.util.ResourceBundle.getBundle("de.netsysit.ui.i18n",java.util.Locale.getDefault());
 	private java.awt.Point lastPressedCoordinate;
 	private javax.swing.border.Border borderLatch;
@@ -181,8 +179,8 @@ public class Core extends java.awt.EventQueue implements java.awt.event.AWTEvent
 					{
 						compLatch = (javax.swing.JComponent) comp;
 						borderLatch = ((javax.swing.JComponent) comp).getBorder();
-						CLASS_LOGGER.info(compLatch);
-						CLASS_LOGGER.info(borderLatch);
+						CLASS_LOGGER.info(java.util.Objects.toString(compLatch));
+						CLASS_LOGGER.info(java.util.Objects.toString(borderLatch));
 						compLatch.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createDashedBorder(Color.RED, 3, 4, 4, false), borderLatch));
 					}
 				}

@@ -42,8 +42,8 @@ import java.beans.PropertyDescriptor;
 
 public class InspectorInterfaceFactory extends de.netsysit.util.beans.InterfaceFactory
 {
-	private final static org.apache.log4j.Logger CLASS_LOGGER=org.apache.log4j.Logger.getLogger(InspectorInterfaceFactory.class);
-	private final static org.apache.log4j.Logger EXCEPTION_LOGGER=org.apache.log4j.Logger.getLogger("ExceptionCatcher");
+	private final static org.slf4j.Logger CLASS_LOGGER=org.slf4j.LoggerFactory.getLogger(InspectorInterfaceFactory.class);
+	private final static org.slf4j.Logger EXCEPTION_LOGGER=org.slf4j.LoggerFactory.getLogger("ExceptionCatcher");
 	private java.lang.Class defaultStopClass;
 	private int maxDepth=1;
 	private int depthCounter;

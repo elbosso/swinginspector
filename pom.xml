@@ -47,7 +47,7 @@ WENN SIE AUF DIE MOEGLICHKEIT EINES SOLCHEN SCHADENS HINGEWIESEN WORDEN SIND.
         <project.build.outputEncoding>${project.custom.encoding}</project.build.outputEncoding>
         <project.reporting.outputEncoding>${project.custom.encoding}</project.reporting.outputEncoding>
       <project.scm.id>elbossos-github</project.scm.id>
-        <elbosso.artifacts.version>1.6.0</elbosso.artifacts.version>
+        <elbosso.artifacts.version>1.8.0</elbosso.artifacts.version>
     </properties>
 
   <build>
@@ -158,28 +158,43 @@ WENN SIE AUF DIE MOEGLICHKEIT EINES SOLCHEN SCHADENS HINGEWIESEN WORDEN SIND.
 		  <url>	https://repo.boundlessgeo.com/main/</url>
 		</repository>
     </repositories>
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>de.elbosso</groupId>
+                <artifactId>bom</artifactId>
+                <version>${elbosso.artifacts.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
     <dependencies>
         <dependency>
             <groupId>de.elbosso</groupId>
             <artifactId>util</artifactId>
-            <version>${elbosso.artifacts.version}</version>
         </dependency>
         <dependency>
             <groupId>de.elbosso</groupId>
             <artifactId>model</artifactId>
-            <version>${elbosso.artifacts.version}</version>
         </dependency>
         <dependency>
             <groupId>de.elbosso</groupId>
             <artifactId>documents</artifactId>
-            <version>${elbosso.artifacts.version}</version>
         </dependency>
-		<!-- https://mvnrepository.com/artifact/log4j/log4j -->
-		<dependency>
-			<groupId>log4j</groupId>
-			<artifactId>log4j</artifactId>
-			<version>1.2.17</version>
-		</dependency>
+        <!-- Logging -->
+        <!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-api -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/ch.qos.logback/logback-classic -->
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+        </dependency>
     </dependencies>
     <distributionManagement>
         <repository>

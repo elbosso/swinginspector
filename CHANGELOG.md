@@ -2,6 +2,15 @@
 
 Changelog of Git Changelog Maven plugin.
 
+## Unreleased
+### GitHub [#4](https://github.com/elbosso/swinginspector/issues/4) Two runtime dependencies are missing in the pom file
+
+**fixes #4**
+
+
+[50220cd7e343f8d](https://github.com/elbosso/swinginspector/commit/50220cd7e343f8d) Jürgen Key *2022-01-15 10:32:06*
+
+
 ## 1.1.0
 ### No issue
 

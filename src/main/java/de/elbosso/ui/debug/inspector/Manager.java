@@ -6,7 +6,6 @@
 package de.elbosso.ui.debug.inspector;
 
 import de.elbosso.util.Utilities;
-import org.apache.log4j.Level;
 
 import javax.swing.*;
 import java.awt.*;
@@ -18,8 +17,8 @@ import java.awt.event.ActionEvent;
  */
 public class Manager extends Object 
 {
-	private final static org.apache.log4j.Logger CLASS_LOGGER = org.apache.log4j.Logger.getLogger(Manager.class);
-	private final static org.apache.log4j.Logger EXCEPTION_LOGGER = org.apache.log4j.Logger.getLogger("ExceptionCatcher");
+	private final static org.slf4j.Logger CLASS_LOGGER = org.slf4j.LoggerFactory.getLogger(Manager.class);
+	private final static org.slf4j.Logger EXCEPTION_LOGGER = org.slf4j.LoggerFactory.getLogger("ExceptionCatcher");
 	private Core core;
 	private static Manager sharedInstace;
 	private javax.swing.Action registerAction;
@@ -92,9 +91,9 @@ public class Manager extends Object
 		try
 		{
 			ifHolder.removeAll();
-			if(CLASS_LOGGER.isInfoEnabled())CLASS_LOGGER.info(comp);
+			if(CLASS_LOGGER.isInfoEnabled())CLASS_LOGGER.info(java.util.Objects.toString(comp));
 			java.awt.Component i=interfaceFactory.fetchInterfaceForBean(comp,comp.getName());
-			if(CLASS_LOGGER.isInfoEnabled())CLASS_LOGGER.info(i);
+			if(CLASS_LOGGER.isInfoEnabled())CLASS_LOGGER.info(java.util.Objects.toString(i));
 			ifHolder.add(i);//new javax.swing.JScrollPane(i));
 			if(ifHolder.getParent()!=null)
 			{
@@ -105,7 +104,7 @@ public class Manager extends Object
 			}
 			else
 			{
-				if(CLASS_LOGGER.isEnabledFor(Level.WARN))CLASS_LOGGER.warn("no parent for "+ifHolder);
+				if(CLASS_LOGGER.isWarnEnabled())CLASS_LOGGER.warn("no parent for "+ifHolder);
 			}
 		}
 		catch(de.netsysit.util.beans.InterfaceFactoryException exp)
@@ -126,7 +125,7 @@ public class Manager extends Object
 	public static void premain(String agentArgs)
 	{
 //		de.elbosso.util.Utilities.configureBasicStdoutLogging(Level.ALL);
-		if(CLASS_LOGGER.isEnabledFor(org.apache.log4j.Level.ERROR))CLASS_LOGGER.error("premain)");
+		if(CLASS_LOGGER.isErrorEnabled())CLASS_LOGGER.error("premain)");
 		Manager.getSharedInstance();
 	}
 }
