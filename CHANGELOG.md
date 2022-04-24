@@ -11,6 +11,14 @@ Changelog of Git Changelog Maven plugin.
 [50220cd7e343f8d](https://github.com/elbosso/swinginspector/commit/50220cd7e343f8d) Jürgen Key *2022-01-15 10:32:06*
 
 
+### GitHub [#5](https://github.com/elbosso/swinginspector/issues/5) get rid of log4j and use the new bom dependency 
+
+**re #5**
+
+
+[30243e573a08ee9](https://github.com/elbosso/swinginspector/commit/30243e573a08ee9) Jürgen Key *2022-04-24 18:14:30*
+
+
 ## 1.1.0
 ### No issue
 
