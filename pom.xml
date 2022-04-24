@@ -32,10 +32,10 @@ WENN SIE AUF DIE MOEGLICHKEIT EINES SOLCHEN SCHADENS HINGEWIESEN WORDEN SIND.
   <modelVersion>4.0.0</modelVersion>
   <groupId>de.elbosso.ui.debug</groupId>
   <artifactId>swinginspector</artifactId>
-  <version>1.2.0-SNAPSHOT</version>
+  <version>1.2.0</version>
     <scm>
         <developerConnection>scm:git:https://github.com/elbosso/swinginspector.git</developerConnection>
-      <tag>HEAD</tag>
+      <tag>swinginspector-1.2.0</tag>
   </scm>
 
     <properties>
