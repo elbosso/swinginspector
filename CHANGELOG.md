@@ -3,6 +3,15 @@
 Changelog of Git Changelog Maven plugin.
 
 ## Unreleased
+### GitHub [#5](https://github.com/elbosso/swinginspector/issues/5) get rid of log4j and use the new bom dependency 
+
+**fixes #5**
+
+
+[648635b2da9d9a7](https://github.com/elbosso/swinginspector/commit/648635b2da9d9a7) Jürgen Key *2022-04-24 18:15:09*
+
+
+## 1.2.0
 ### GitHub [#4](https://github.com/elbosso/swinginspector/issues/4) Two runtime dependencies are missing in the pom file
 
 **fixes #4**
