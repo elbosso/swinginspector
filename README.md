@@ -13,6 +13,8 @@
 [![Github All Releases](https://img.shields.io/github/downloads/elbosso/swinginspector/total.svg)](https://github.com/elbosso/swinginspector)
 [![Website elbosso.github.io](https://img.shields.io/website-up-down-green-red/https/elbosso.github.io.svg)](https://elbosso.github.io/)
 
+[![Demo-Video](http://img.youtube.com/vi/OhmDvpQBJ0g/0.jpg)](http://www.youtube.com/watch?v=OhmDvpQBJ0g "Demo")
+
 ## Preconditions
 
 Java 11
