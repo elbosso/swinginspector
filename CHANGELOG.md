@@ -11,6 +11,14 @@ Changelog of Git Changelog Maven plugin.
 [648635b2da9d9a7](https://github.com/elbosso/swinginspector/commit/648635b2da9d9a7) Jürgen Key *2022-04-24 18:15:09*
 
 
+### GitHub [#6](https://github.com/elbosso/swinginspector/issues/6) fix class not found exception with standalone jar with dependencies
+
+**fixes #6**
+
+
+[c879e5c64cc6f49](https://github.com/elbosso/swinginspector/commit/c879e5c64cc6f49) Jürgen Key *2022-05-05 17:06:10*
+
+
 ## 1.2.0
 ### GitHub [#4](https://github.com/elbosso/swinginspector/issues/4) Two runtime dependencies are missing in the pom file
 

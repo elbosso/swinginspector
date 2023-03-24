@@ -28,7 +28,7 @@ Any Java application using Swing for its GUI can be used with the tools provided
 jar file built in target as premain-jar like this:
 
 ```
-java -javaagent:<path-to>/swinginspector-0.1.0-SNAPSHOT-jar-with-dependencies.jar -jar <clientapp>.jar
+java -javaagent:<path-to>/swinginspector-x.y.z-SNAPSHOT-jar-with-dependencies.jar -jar <clientapp>.jar
 ```
 
 After starting the application in question, one more frame opens -  a rather small one, so watch out - it
