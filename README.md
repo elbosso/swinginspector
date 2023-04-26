@@ -17,7 +17,7 @@
 
 ## Preconditions
 
-Java 11
+Java 17
 
 ## Build
 mvn -U package assembly:single
