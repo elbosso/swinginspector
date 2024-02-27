@@ -3,6 +3,7 @@
 <!---
 [![start with why](https://img.shields.io/badge/start%20with-why%3F-brightgreen.svg?style=flat)](http://www.ted.com/talks/simon_sinek_how_great_leaders_inspire_action)
 --->
+[![Pipeline status](https://github.com/elbosso/swinginspector/actions/workflows/workflow.yml/badge.svg)](https://github.com/elbosso/swinginspector/actions)
 [![GitHub release](https://img.shields.io/github/release/elbosso/swinginspector/all.svg?maxAge=1)](https://GitHub.com/elbosso/swinginspector/releases/)
 [![GitHub tag](https://img.shields.io/github/tag/elbosso/swinginspector.svg)](https://GitHub.com/elbosso/swinginspector/tags/)
 [![GitHub license](https://img.shields.io/github/license/elbosso/swinginspector.svg)](https://github.com/elbosso/swinginspector/blob/master/LICENSE)
